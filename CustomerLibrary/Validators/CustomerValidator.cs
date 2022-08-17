@@ -17,12 +17,12 @@ namespace CustomerInformation
                 errorList.Add(ErrorList.FirstNameError);
             }
 
-            if (checkedCustomer.LastName == null)
+            if (String.IsNullOrEmpty(checkedCustomer.LastName))
             {
                 errorList.Add(ErrorList.LastNameExsistanceError);
             }
 
-            if (checkedCustomer.FirstName.Length > MaxNameLength)
+            if (checkedCustomer.LastName.Length > MaxNameLength)
             {
                 errorList.Add(ErrorList.LastNameErrorLength);
             }
@@ -47,6 +47,11 @@ namespace CustomerInformation
 
                 errorList.Add(ErrorList.EmailError);
 
+            }
+
+            if(checkedCustomer.TotalPurchasesAmount < 0)
+            {
+                errorList.Add(ErrorList.PurchaseError);
             }
 
             return errorList;

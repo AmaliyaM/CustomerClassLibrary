@@ -8,7 +8,7 @@
         const int MaxStateLength = 20;
 
 
-        public static List<string> ValidateCustomer(Address checkedAddress)
+        public static List<string> ValidateAddress(Address checkedAddress)
         {
 
             List<string> errorList = new List<string>();
@@ -40,7 +40,7 @@
 
             if (checkedAddress.City == string.Empty)
             {
-                errorList.Add(ErrorList.CountryExsistanceError);
+                errorList.Add(ErrorList.CityExsistanceError);
             }
 
             if (checkedAddress.PostalCode.Length > MaxPostalCodeLength)

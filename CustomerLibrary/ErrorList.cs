@@ -10,6 +10,8 @@ namespace CustomerInformation
         public const string EmailError = "Please enter valid email";
         public const string NotesLengthError = "At list singe note required";
         public const string AddressError = "At list singe address required";
+        public const string PurchaseError = "Purchase amount can't be negative";
+
 
         public const string FirstAddressLineError= "First adress line is required";
         public const string FirstAddressLineLengthError = "First line is too long.";
