@@ -1,6 +1,6 @@
 ﻿namespace CustomerInformation
 {
-    public class CustomerValidator
+    public class AddressValidator
     {
         const int MaxAdressLength = 100;
         const int MaxCityLength = 50;
