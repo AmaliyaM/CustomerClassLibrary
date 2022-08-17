@@ -1,11 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text;
+using FluentValidation;
+using FluentValidation.TestHelper;
 using CustomerInformation;
 
 namespace AddressTests;
 
-public class CustomerTest
+public class AddressTest
 {
+    public AddressValidator validator = new AddressValidator();
     private static Random random = new Random();
 
     public static string RandomString(int length)
@@ -43,8 +46,7 @@ public class CustomerTest
             RandomString(25),
             AvailableCountries.Canada);
 
-        var validationResult = AddressValidator.ValidateAddress(checkedAddress);
-
+        var validationResult = (validator.TestValidate(checkedAddress)).Errors.Select(res => res.ErrorMessage);
         var expectedValidationResult = new List<string>()
             {
                 ErrorList.FirstAddressLineLengthError,
@@ -69,7 +71,7 @@ public class CustomerTest
             String.Empty,
             AvailableCountries.Canada);
 
-        var validationResult = AddressValidator.ValidateAddress(checkedAddress);
+        var validationResult = (validator.TestValidate(checkedAddress)).Errors.Select(res => res.ErrorMessage);
 
         var expectedValidationResult = new List<string>()
             {
@@ -87,8 +89,7 @@ public class CustomerTest
     {
         Address checkedAddress = new Address("Road Street", "Maint Avenue", AdressType.Billing, "Toronto", "346330", "Alberta", AvailableCountries.Canada);
 
-        var validationResult = AddressValidator.ValidateAddress(checkedAddress);
-
+        var validationResult = (validator.TestValidate(checkedAddress)).Errors.Select(res => res.ErrorMessage);
         Assert.Empty(validationResult);
     }
 

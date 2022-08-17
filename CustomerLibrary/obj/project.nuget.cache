@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ktFJ5LSF3T2zRKuCmOjv+lWgIKIPrvrM5shGzyWz8UNQW1+3xQzfIGyBeR2mvR/RdyuyU2G1OCY71ec1m5GQ5Q==",
+  "dgSpecHash": "h8EP7uXqM3CTVZX2TeWG2KYqPiCnH/Pgm94se0wMAuSgJt+sg2ozAS0i0hEHDXdd76mTJ1U8yr4OE7cvfLfgSA==",
   "success": true,
   "projectFilePath": "/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/CustomerLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/alexandram/.nuget/packages/fluentvalidation/11.2.0/fluentvalidation.11.2.0.nupkg.sha512",
+    "/Users/alexandram/.nuget/packages/fluentvalidation.aspnetcore/11.2.1/fluentvalidation.aspnetcore.11.2.1.nupkg.sha512",
+    "/Users/alexandram/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.0/fluentvalidation.dependencyinjectionextensions.11.2.0.nupkg.sha512",
+    "/Users/alexandram/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.1.0/microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

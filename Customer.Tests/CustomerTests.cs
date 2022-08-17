@@ -1,11 +1,13 @@
-﻿using  CustomerInformation;
-using System.ComponentModel.DataAnnotations;
+﻿using CustomerInformation;
+using FluentValidation;
+using FluentValidation.TestHelper;
 using System.Text;
 
 namespace Customer.Tests;
 
 public class CustomerTest
 {
+    public CustomerValidator validator = new CustomerValidator();
     [Fact]
     public void ShouldBeAbleToCreateCustomer()
     {   List<Address> adressList = new List<Address>();
@@ -63,9 +65,9 @@ public class CustomerTest
             "noemail",
              -9);
 
-        var validationResult = CustomerValidator.ValidateCustomer(customer);
+        var validationResult = (validator.TestValidate(customer)).Errors.Select(res => res.ErrorMessage);
 
-        var expectedValidationResult = new List<string>()
+        string[] expectedValidationResult = 
             {
                 ErrorList.FirstNameError,
                 ErrorList.LastNameExsistanceError,
@@ -95,8 +97,8 @@ public class CustomerTest
              "alejdmj@gmail.com",
              "+66666666666",
               9);
-         
-        var validationResult = CustomerValidator.ValidateCustomer(customer);
+
+        var validationResult = (validator.TestValidate(customer)).Errors.Select(res => res.ErrorMessage);
 
         var expectedValidationResult = new List<string>()
             {
@@ -118,7 +120,7 @@ public class CustomerTest
         CustomerClass customer = new CustomerClass("John", "Second", adressList, notes, "ashfjfnh@gmail.com", "+16175551212", 4);
         customer.Notes = notes;
 
-        var validationResult = CustomerValidator.ValidateCustomer(customer);
+        var validationResult = (validator.TestValidate(customer)).Errors.Select(res => res.ErrorMessage);
         Assert.Empty(validationResult);
     }
 

@@ -1,70 +1,36 @@
-﻿namespace CustomerInformation
+﻿using FluentValidation;
+
+namespace CustomerInformation
 {
-    public class AddressValidator
+
+    public class AddressValidator : AbstractValidator<Address>
     {
         const int MaxAdressLength = 100;
         const int MaxCityLength = 50;
         const int MaxPostalCodeLength = 6;
         const int MaxStateLength = 20;
 
-
-        public static List<string> ValidateAddress(Address checkedAddress)
+        public AddressValidator()
         {
+            RuleFor(address => address.FirstLine).MaximumLength(MaxAdressLength).WithMessage(ErrorList.FirstAddressLineLengthError);
 
-            List<string> errorList = new List<string>();
+            RuleFor(address => address.FirstLine).NotEmpty().WithMessage(ErrorList.FirstAddressLineError);
 
-            if (checkedAddress.FirstLine.Length > MaxAdressLength)
-            {
-                errorList.Add(ErrorList.FirstAddressLineLengthError);
-            }
+            RuleFor(address => address.SecondLine).MaximumLength(MaxAdressLength).WithMessage(ErrorList.SecondAddressLineLengthError);
 
-            if (checkedAddress.FirstLine == string.Empty)
-            {
-                errorList.Add(ErrorList.FirstAddressLineError);
-            }
+            RuleFor(address => address.Type).IsInEnum().WithMessage(ErrorList.AddressTypeFormatError);
 
-            if (checkedAddress.SecondLine.Length > MaxAdressLength)
-            {
-                errorList.Add(ErrorList.SecondAddressLineLengthError);
-            }
+            RuleFor(address => address.City).MaximumLength(MaxCityLength).WithMessage(ErrorList.CityLengthError);
 
-            if ((checkedAddress.Type != AdressType.Billing) && (checkedAddress.Type != AdressType.Shipping))
-            {
-                errorList.Add(ErrorList.AddressTypeFormatError);
-            }
+            RuleFor(address => address.City).NotEmpty().WithMessage(ErrorList.CityExsistanceError);
 
-            if (checkedAddress.City.Length > MaxCityLength)
-            {
-                errorList.Add(ErrorList.CityLengthError);
-            }
+            RuleFor(address => address.PostalCode).MaximumLength(MaxPostalCodeLength).WithMessage(ErrorList.PostalCodeError);
 
-            if (checkedAddress.City == string.Empty)
-            {
-                errorList.Add(ErrorList.CityExsistanceError);
-            }
+            RuleFor(address => address.PostalCode).NotEmpty().WithMessage(ErrorList.PostalCodeExsistanceError);
 
-            if (checkedAddress.PostalCode.Length > MaxPostalCodeLength)
-            {
-                errorList.Add(ErrorList.PostalCodeError);
-            }
+            RuleFor(address => address.State).MaximumLength(MaxStateLength).WithMessage(ErrorList.StateError);
 
-            if (checkedAddress.PostalCode == string.Empty)
-            {
-                errorList.Add(ErrorList.PostalCodeExsistanceError);
-            }
-            if (checkedAddress.State.Length > MaxStateLength)
-            {
-                errorList.Add(ErrorList.StateError);
-            }
-
-            if (checkedAddress.State == string.Empty)
-            {
-                errorList.Add(ErrorList.StateExsistanceError);
-            }
-
-
-            return errorList;
-
+            RuleFor(address => address.State).NotEmpty().WithMessage(ErrorList.StateExsistanceError);
 
         }
     }

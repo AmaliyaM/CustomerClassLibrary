@@ -3,11 +3,15 @@
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/bin/Debug/net6.0/CustomerLibrary.runtimeconfig.json
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/bin/Debug/net6.0/CustomerLibrary.dll
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/bin/Debug/net6.0/CustomerLibrary.pdb
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/bin/Debug/net6.0/FluentValidation.dll
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.csproj.AssemblyReference.cache
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.GeneratedMSBuildEditorConfig.editorconfig
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.AssemblyInfoInputs.cache
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.AssemblyInfo.cs
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.csproj.CoreCompileInputs.cache
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.csproj.CopyComplete
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.dll
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/refint/CustomerLibrary.dll
 /Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.pdb

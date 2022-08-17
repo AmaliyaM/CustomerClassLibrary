@@ -10,6 +10,9 @@
 /Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/Customer.Tests.runtimeconfig.json
 /Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/Customer.Tests.dll
 /Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/Customer.Tests.pdb
+/Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/FluentValidation.dll
+/Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
 /Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll
 /Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/Microsoft.TestPlatform.CoreUtilities.dll
 /Users/alexandram/Projects/CustomerLibrary/Customer.Tests/bin/Debug/net6.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll

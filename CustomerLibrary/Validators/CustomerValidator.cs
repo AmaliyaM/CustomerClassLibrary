@@ -1,64 +1,33 @@
 ﻿using System.Text.RegularExpressions;
+using FluentValidation;
 namespace CustomerInformation
 {
-    public class CustomerValidator
+    public class CustomerValidator : AbstractValidator<CustomerClass>
     {
         const int MaxNameLength = 50;
         const string PhoneNumberRule = @"^\+[1-9]\d{1,14}$";
         const string EmailRule = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
 
-        public static List<string> ValidateCustomer(CustomerClass checkedCustomer)
+        public CustomerValidator()
         {
+            RuleFor(customer => customer.FirstName).MaximumLength(MaxNameLength).WithMessage(ErrorList.FirstNameError);
 
-            List<string> errorList = new List<string>();
+            RuleFor(customer => customer.LastName).NotEmpty().WithMessage(ErrorList.LastNameExsistanceError);
 
-            if (checkedCustomer.FirstName.Length > MaxNameLength)
-            {
-                errorList.Add(ErrorList.FirstNameError);
-            }
+            RuleFor(customer => customer.LastName).MaximumLength(MaxNameLength).WithMessage(ErrorList.LastNameErrorLength);
 
-            if (String.IsNullOrEmpty(checkedCustomer.LastName))
-            {
-                errorList.Add(ErrorList.LastNameExsistanceError);
-            }
+            RuleFor(customer => customer.Addresses).NotEmpty().WithMessage(ErrorList.AddressError);
 
-            if (checkedCustomer.LastName.Length > MaxNameLength)
-            {
-                errorList.Add(ErrorList.LastNameErrorLength);
-            }
-                
-            if (checkedCustomer.Addresses.Count <1)
-            {
-                errorList.Add(ErrorList.AddressError);
-            }
+            RuleFor(customer => customer.PhoneNumber).Matches(PhoneNumberRule).WithMessage(ErrorList.PhoneNumberError);
 
-            if (!Regex.IsMatch(checkedCustomer.PhoneNumber, PhoneNumberRule)) {
+            RuleFor(customer => customer.Notes).NotEmpty().WithMessage(ErrorList.NotesLengthError);
 
-                errorList.Add(ErrorList.PhoneNumberError);
+            RuleFor(customer => customer.Email).Matches(EmailRule).WithMessage(ErrorList.EmailError);
 
-            }
-
-            if (checkedCustomer.Notes.Count < 1)
-            {
-                errorList.Add(ErrorList.NotesLengthError);
-            }
-
-            if (!Regex.IsMatch(checkedCustomer.Email,EmailRule)) {
-
-                errorList.Add(ErrorList.EmailError);
-
-            }
-
-            if(checkedCustomer.TotalPurchasesAmount < 0)
-            {
-                errorList.Add(ErrorList.PurchaseError);
-            }
-
-            return errorList;
+            RuleFor(customer => customer.TotalPurchasesAmount).GreaterThan(0).WithMessage(ErrorList.PurchaseError);
 
 
         }
     }
-
 }
 
