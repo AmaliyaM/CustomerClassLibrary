@@ -1,0 +1,5 @@
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.csproj.AssemblyReference.cache
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.AssemblyInfoInputs.cache
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.AssemblyInfo.cs
+/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/obj/Debug/net6.0/CustomerLibrary.csproj.CoreCompileInputs.cache
