@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 namespace CustomerInformation
 
 {
@@ -12,8 +11,7 @@ namespace CustomerInformation
             adressList.Add(addItem);
             List<string> notes = new List<string>();
             notes.Add("note1");
-            CustomerClass customer = new CustomerClass("anhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhggggggfbdgtbgxfdg", "",adressList,notes,"hshdh@fhhf.com","89281989",3);
-            Console.WriteLine(customer);
+            CustomerClass customer = new CustomerClass("anhh", "",adressList,notes,"hshdh@fhhf.com","89281989",3);
         }
     }
 }

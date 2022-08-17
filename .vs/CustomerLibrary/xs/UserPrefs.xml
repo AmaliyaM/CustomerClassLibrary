@@ -1,11 +1,7 @@
 ﻿<Properties StartupConfiguration="{4749853E-5F89-494F-87DD-6A3D8EA6FD27}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="CustomerLibrary/Validators/AddressValidator.cs">
     <Files>
-      <File FileName="CustomerLibrary/Validators/CustomerValidator.cs" Line="18" Column="14" />
+      <File FileName="CustomerLibrary/Validators/CustomerValidator.cs" Line="4" Column="18" />
       <File FileName="CustomerLibrary/ErrorList.cs" Line="31" Column="1" />
       <File FileName="CustomerLibrary/Entities/Customer.cs" Line="13" Column="63" />
       <File FileName="CustomerLibrary/Entities/Address.cs" Line="20" Column="85" />
@@ -14,17 +10,18 @@
       <File FileName="CustomerLibrary/Program.cs" Line="21" Column="1" />
       <File FileName="Customer.Tests/AdressTest.cs" Line="9" Column="1" />
       <File FileName="CustomerLibrary/Entities/AvailableCountries.cs" Line="15" Column="1" />
-      <File FileName="CustomerLibrary/Validators/AddressValidator.cs" Line="13" Column="1" />
+      <File FileName="CustomerLibrary/Validators/AddressValidator.cs" Line="15" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CustomerLibrary" expanded="True">
+          <Node name="CustomerLibrary" expanded="True" selected="True">
             <Node name="tests" expanded="True">
               <Node name="Customer.Tests" expanded="True" />
             </Node>
             <Node name="CustomerLibrary" expanded="True">
               <Node name="Entities" expanded="True" />
+              <Node name="Validators" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -39,7 +36,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.CustomerLibrary PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.CustomerLibrary PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
