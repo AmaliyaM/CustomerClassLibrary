@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Metrics;
 using System.Text;
 using CustomerInformation;
 
@@ -19,11 +20,21 @@ public class CustomerTest
     [Fact]
     public void ShouldBeAbleToCreateAdress()
     {
-        Address checkedAddress = new Address("Road Street", "Maint Avenue", AdressType.Billing, "Toronto", "346330", "Alberta", AvailableCountries.Canada);
+        Address checkedAddress = new Address
+        {
+            FirstLine = "Road Street",
+            SecondLine = "Maint Avenue",
+            Type = AddressType.Billing,
+            City = "Toronto",
+            PostalCode = "346330",
+            State = "Alberta",
+            Country = AvailableCountries.Canada,
+            CustomerId = 1
+        };
 
         Assert.Equal("Road Street", checkedAddress.FirstLine);
         Assert.Equal("Maint Avenue", checkedAddress.SecondLine);
-        Assert.Equal(AdressType.Billing, checkedAddress.Type);
+        Assert.Equal(AddressType.Billing, checkedAddress.Type);
         Assert.Equal("Toronto", checkedAddress.City);
         Assert.Equal("346330", checkedAddress.PostalCode);
         Assert.Equal("Alberta", checkedAddress.State);
@@ -34,14 +45,15 @@ public class CustomerTest
     [Fact]
     public void ShouldReturnLengthErrors()
     {
-        Address checkedAddress = new Address(
-            RandomString(105),
-            RandomString(105),
-            AdressType.Billing,
-            RandomString(55),
-            RandomString(8),
-            RandomString(25),
-            AvailableCountries.Canada);
+        Address checkedAddress = new Address {
+            FirstLine = RandomString(105),
+            SecondLine = RandomString(105),
+            Type = AddressType.Billing,
+            City = RandomString(55),
+            PostalCode = RandomString(8),
+            State = RandomString(25),
+            Country = AvailableCountries.Canada,
+            CustomerId = 1};
 
         var validationResult = AddressValidator.ValidateAddress(checkedAddress);
 
@@ -60,14 +72,17 @@ public class CustomerTest
     [Fact]
     public void ShouldReturnExsistanceErrors()
     {
-        Address checkedAddress = new Address(
-            String.Empty,
-            String.Empty,
-            AdressType.Billing,
-            String.Empty,
-            String.Empty,
-            String.Empty,
-            AvailableCountries.Canada);
+        Address checkedAddress = new Address
+        {
+            FirstLine = String.Empty,
+            SecondLine = String.Empty,
+            Type = AddressType.Billing,
+            City = String.Empty,
+            PostalCode = String.Empty,
+            State = String.Empty,
+            Country = AvailableCountries.Canada,
+            CustomerId = 1
+        };
 
         var validationResult = AddressValidator.ValidateAddress(checkedAddress);
 
@@ -85,7 +100,17 @@ public class CustomerTest
     [Fact]
     public void ShouldReturnEmptyErrorsList()
     {
-        Address checkedAddress = new Address("Road Street", "Maint Avenue", AdressType.Billing, "Toronto", "346330", "Alberta", AvailableCountries.Canada);
+        Address checkedAddress = new Address
+        {
+            FirstLine = "Road Street",
+            SecondLine = "Maint Avenue",
+            Type = AddressType.Billing,
+            City = "Toronto",
+            PostalCode = "346330",
+            State = "Alberta",
+            Country = AvailableCountries.Canada,
+            CustomerId = 1
+        };
 
         var validationResult = AddressValidator.ValidateAddress(checkedAddress);
 

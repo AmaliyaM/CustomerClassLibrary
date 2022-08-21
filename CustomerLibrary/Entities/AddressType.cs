@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CustomerInformation
 {
-    public enum AdressType
+    public enum AddressType
     {
         Shipping ,
         Billing

@@ -12,16 +12,6 @@
 
         public decimal? TotalPurchasesAmount { get; set; } = 0;
 
-        public CustomerClass(string firstName, string lastName, List<Address> address, List<string> notes, string email, string phoneNumber, decimal amount)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            Addresses = address;
-            PhoneNumber = phoneNumber;
-            Email = email;
-            Notes = notes;
-            TotalPurchasesAmount = amount;
-        }
     }
 
 }

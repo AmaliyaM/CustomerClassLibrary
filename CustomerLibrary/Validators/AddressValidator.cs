@@ -28,7 +28,7 @@
                 errorList.Add(ErrorList.SecondAddressLineLengthError);
             }
 
-            if ((checkedAddress.Type != AdressType.Billing) && (checkedAddress.Type != AdressType.Shipping))
+            if ((checkedAddress.Type != AddressType.Billing) && (checkedAddress.Type != AddressType.Shipping))
             {
                 errorList.Add(ErrorList.AddressTypeFormatError);
             }

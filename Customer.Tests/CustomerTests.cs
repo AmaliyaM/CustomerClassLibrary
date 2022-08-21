@@ -9,12 +9,30 @@ public class CustomerTest
     [Fact]
     public void ShouldBeAbleToCreateCustomer()
     {   List<Address> adressList = new List<Address>();
-        Address addItem = new Address("Road Street", "Maint Avenue", AdressType.Billing, "Toronto", "346330", "Alberta", AvailableCountries.Canada);
+        Address addItem = new Address
+        {
+            FirstLine = "Road Street",
+            SecondLine = "Maint Avenue",
+            Type = AddressType.Billing,
+            City = "Toronto",
+            PostalCode = "346330",
+            State = "Alberta",
+            Country = AvailableCountries.Canada,
+            CustomerId = 1
+        };
         adressList.Add(addItem);
         List<string> notes = new List<string>();
         notes.Add("note1");
-        CustomerClass customer = new CustomerClass("John", "Second",adressList, notes, "ashfjfnh@gmail.com", "+16175551212", 4);
-        customer.Notes = notes;
+        CustomerClass customer = new CustomerClass
+        {
+            FirstName = "John",
+            LastName = "Second",
+            Addresses = adressList,
+            Notes = notes,
+            Email = "ashfjfnh@gmail.com",
+            PhoneNumber = "+16175551212",
+            TotalPurchasesAmount = 4
+        };
 
         Assert.Equal("John", customer.FirstName);
         Assert.Equal("Second", customer.LastName);
@@ -29,14 +47,30 @@ public class CustomerTest
     public void ShouldBeAbleToCreateCustomerWithNullPurchase()
     {
         List<Address> adressList = new List<Address>();
-        Address addItem = new Address("Road Street", "Maint Avenue", AdressType.Billing, "Toronto", "346330", "Alberta", AvailableCountries.Canada);
+        Address addItem = new Address {
+            FirstLine = "Road Street",
+            SecondLine = "Maint Avenue",
+            Type = AddressType.Billing,
+            City = "Toronto",
+            PostalCode = "346330",
+            State = "Alberta",
+            Country = AvailableCountries.Canada,
+            CustomerId = 1};
         adressList.Add(addItem);
         List<string> notes = new List<string>();
         notes.Add("note1");
 
-        CustomerClass customer = new CustomerClass("John", "Second", adressList, notes, "ashfjfnh@gmail.com", "+16175551212", 0);
+        CustomerClass customer = new CustomerClass
+        {
+            FirstName = "John",
+            LastName = "Second",
+            Addresses = adressList,
+            Notes = notes,
+            Email = "ashfjfnh@gmail.com",
+            PhoneNumber = "+16175551212",
+            TotalPurchasesAmount = 0
+        };
 
-        customer.Notes = notes;
         Assert.Equal("John", customer.FirstName);
         Assert.Equal("Second", customer.LastName);
         Assert.Equal(adressList, customer.Addresses);
@@ -54,14 +88,16 @@ public class CustomerTest
         adressList.Clear();
         List<string> notes = new List<string>();
         notes.Clear();
-        CustomerClass customer = new CustomerClass(
-            "000000000000000009hg6162727bshw0000009hg6162727bshwsdvsdv",
-            "",
-            adressList,
-            notes,
-            "nonumber",
-            "noemail",
-             -9);
+        CustomerClass customer = new CustomerClass
+        {
+            FirstName = "000000000000000009hg6162727bshw0000009hg6162727bshwsdvsdv",
+            LastName = "",
+            Addresses = adressList,
+            PhoneNumber = "nonumber",
+            Email = "noemail",
+            Notes = notes,
+            TotalPurchasesAmount = -9
+        };
 
         var validationResult = CustomerValidator.ValidateCustomer(customer);
 
@@ -83,18 +119,30 @@ public class CustomerTest
     public void ShouldValidateLongLastName()
     {
         List<Address> adressList = new List<Address>();
-        Address addItem = new Address("Road Street", "Maint Avenue", AdressType.Billing, "Toronto", "346330", "Alberta", AvailableCountries.Canada);
+        Address addItem = new Address
+        {
+            FirstLine = "Road Street",
+            SecondLine = "Maint Avenue",
+            Type = AddressType.Billing,
+            City = "Toronto",
+            PostalCode = "346330",
+            State = "Alberta",
+            Country = AvailableCountries.Canada,
+            CustomerId = 1
+        };
         adressList.Add(addItem);
         List<string> notes = new List<string>();
         notes.Add("note1");
-        CustomerClass customer = new CustomerClass(
-             "john",
-             "000000000000000009hg6162727bshw0000009hg6162727bshwsdvsdv",
-             adressList,
-             notes,
-             "alejdmj@gmail.com",
-             "+66666666666",
-              9);
+        CustomerClass customer = new CustomerClass
+        {
+            FirstName = "john",
+            LastName = "000000000000000009hg6162727bshw0000009hg6162727bshwsdvsdv",
+            Addresses = adressList,
+            Notes = notes,
+            Email = "alejdmj@gmail.com",
+            PhoneNumber = "+66666666666",
+            TotalPurchasesAmount = 9
+        };
          
         var validationResult = CustomerValidator.ValidateCustomer(customer);
 
@@ -111,12 +159,30 @@ public class CustomerTest
     public void ShouldNotReturnErrors()
     {
         List<Address> adressList = new List<Address>();
-        Address addItem = new Address("Road Street", "Maint Avenue", AdressType.Billing, "Toronto", "346330", "Alberta", AvailableCountries.Canada);
+        Address addItem = new Address
+        {
+            FirstLine = "Road Street",
+            SecondLine = "Maint Avenue",
+            Type = AddressType.Billing,
+            City = "Toronto",
+            PostalCode = "346330",
+            State = "Alberta",
+            Country = AvailableCountries.Canada,
+            CustomerId = 1
+        };
         adressList.Add(addItem);
         List<string> notes = new List<string>();
         notes.Add("note1");
-        CustomerClass customer = new CustomerClass("John", "Second", adressList, notes, "ashfjfnh@gmail.com", "+16175551212", 4);
-        customer.Notes = notes;
+        CustomerClass customer = new CustomerClass
+        {
+            FirstName = "john",
+            LastName = "Second",
+            Addresses = adressList,
+            Notes = notes,
+            Email = "alejdmj@gmail.com",
+            PhoneNumber = "+16175551212",
+            TotalPurchasesAmount = 9
+        };
 
         var validationResult = CustomerValidator.ValidateCustomer(customer);
         Assert.Empty(validationResult);
