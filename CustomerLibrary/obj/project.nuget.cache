@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ktFJ5LSF3T2zRKuCmOjv+lWgIKIPrvrM5shGzyWz8UNQW1+3xQzfIGyBeR2mvR/RdyuyU2G1OCY71ec1m5GQ5Q==",
+  "dgSpecHash": "X2s7enlAR1uwtWaBrnM10yeyb0MK9BP3GN4Enw5LKS5eOJ4ZG1D0HGJ2qnZpN0xjeIE2Tycm/5XIodtZn8gUaA==",
   "success": true,
-  "projectFilePath": "/Users/alexandram/Projects/CustomerLibrary/CustomerLibrary/CustomerLibrary.csproj",
+  "projectFilePath": "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
