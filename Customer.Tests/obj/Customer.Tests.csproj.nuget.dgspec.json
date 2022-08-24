@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Customer.Tests\\Customer.Tests.csproj": {}
+    "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Customer.Tests\\Customer.Tests.csproj": {
+    "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Customer.Tests\\Customer.Tests.csproj",
+        "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
         "projectName": "Customer.Tests",
-        "projectPath": "D:\\Projects\\Customer.Tests\\Customer.Tests.csproj",
+        "projectPath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
         "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Customer.Tests\\obj\\",
+        "outputPath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj": {
-                "projectPath": "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj"
+              "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj": {
+                "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj": {
+    "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj",
+        "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj",
         "projectName": "CustomerLibrary",
-        "projectPath": "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj",
+        "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj",
         "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\CustomerLibrary\\obj\\",
+        "outputPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj",
+      "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj",
       "projectName": "CustomerLibrary",
-      "projectPath": "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj",
+      "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj",
       "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\CustomerLibrary\\obj\\",
+      "outputPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -538,13 +538,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ошибка чтения файла кэша D:\\Projects\\CustomerLibrary\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

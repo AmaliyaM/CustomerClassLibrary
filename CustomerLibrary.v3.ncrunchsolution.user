@@ -1,9 +1,5 @@
 ﻿<SolutionConfiguration>
   <Settings>
-<<<<<<< Updated upstream
-    <CurrentEngineMode>Run all tests automatically [Global]</CurrentEngineMode>
-    <TestsWindowSplitterDistance>49.8381881713867%</TestsWindowSplitterDistance>
-=======
     <AutoEnable>True</AutoEnable>
     <CurrentEngineMode>Run all tests automatically [Global]</CurrentEngineMode>
     <TestsWindowMenuOptions>
@@ -13,25 +9,6 @@
       <ShowUnexecutedTestsMenuOption>true</ShowUnexecutedTestsMenuOption>
       <ShowIgnoredTestsMenuOption>false</ShowIgnoredTestsMenuOption>
     </TestsWindowMenuOptions>
-    <TestsWindowSplitterDistance>26.2135925292969%</TestsWindowSplitterDistance>
-    <TestsWindowTreeLayout>
-      <Column>
-        <Name>Name</Name>
-        <Width>600</Width>
-      </Column>
-      <Column>
-        <Name>Status</Name>
-        <Width>150</Width>
-      </Column>
-      <Column>
-        <Name>LastExecutionTime</Name>
-        <Width>180</Width>
-      </Column>
-      <Column>
-        <Name>GridNode</Name>
-        <Width>160</Width>
-      </Column>
-    </TestsWindowTreeLayout>
->>>>>>> Stashed changes
+    <TestsWindowSplitterDistance>58.7248306274414%</TestsWindowSplitterDistance>
   </Settings>
 </SolutionConfiguration>

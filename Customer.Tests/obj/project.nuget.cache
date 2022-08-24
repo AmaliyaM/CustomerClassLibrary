@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yrURgKwt/qJu026HgBONeGN60pjQt7VmnWOYN+jraX+MO+Elm679ktRN32mwZUSe7XyuXrFIZx4NGLEUZMRLyQ==",
+  "dgSpecHash": "buUNU/biMbNDbvy0EdbZF/tV4CE5ifLrOyMx1sOom0KT+Ke065DIM0Ck8X2ia/o6vU1f3cUXUJgRTjzzslK5xA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Customer.Tests\\Customer.Tests.csproj",
+  "projectFilePath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amaliya\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
@@ -105,12 +105,5 @@
     "C:\\Users\\Amaliya\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ошибка чтения файла кэша D:\\Projects\\Customer.Tests\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

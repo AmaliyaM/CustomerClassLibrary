@@ -6568,11 +6568,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Customer.Tests\\Customer.Tests.csproj",
+      "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
       "projectName": "Customer.Tests",
-      "projectPath": "D:\\Projects\\Customer.Tests\\Customer.Tests.csproj",
+      "projectPath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
       "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Customer.Tests\\obj\\",
+      "outputPath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6594,8 +6594,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj": {
-              "projectPath": "D:\\Projects\\CustomerLibrary\\CustomerLibrary.csproj"
+            "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj": {
+              "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj"
             }
           }
         }
@@ -6650,13 +6650,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ошибка чтения файла кэша D:\\Projects\\Customer.Tests\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
