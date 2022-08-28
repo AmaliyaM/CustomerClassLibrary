@@ -1,4 +1,5 @@
 ﻿using CustomerInformation;
+using CustomerLibrary.Interfaces;
 using CustomerLibrary.Repositories;
 namespace Customer.Tests
 {
@@ -23,7 +24,7 @@ namespace Customer.Tests
         public void ShouldBeAbleToReadCustomer()
         {
             CustomerFixture.CreateMockCustomer();
-            var createdCustomer = CustomerFixture.CreateCustomerRepository().Read("ashfjfnh@gmail.com");
+            var createdCustomer = CustomerFixture.CreateCustomerRepository().Read("569");
 
         }
 
@@ -34,9 +35,22 @@ namespace Customer.Tests
             var repository = CustomerFixture.CreateCustomerRepository();
             customer.LastName = "updated2";
             repository.Update(customer);
-            var result = repository.Read("ashfjfnh@gmail.com").LastName;
+            var result = repository.Read("781").LastName;
             Assert.Equal(result, "updated2");
 
+        }
+
+        [Fact]
+        public void ShouldBeAbleToDeleteCustomerWithNullInfo()
+        {
+            var customer = new CustomerClass()
+            {
+                ID = 787,
+            };
+            var repository = CustomerFixture.CreateCustomerRepository();
+            repository.Delete(customer);
+            var deletedCustomer = repository.Read("787");
+            Assert.Null(deletedCustomer);
         }
 
         [Fact]
@@ -45,9 +59,10 @@ namespace Customer.Tests
             var customer = CustomerFixture.CreateMockCustomer();
             var repository = CustomerFixture.CreateCustomerRepository();
             repository.Delete(customer);
-            var deletedCustomer = repository.Read("ashfjfnh@gmail.com");
+            var deletedCustomer = repository.Read("787");
             Assert.Null(deletedCustomer);
         }
+
 
 
         public class CustomerFixture
@@ -64,21 +79,23 @@ namespace Customer.Tests
                     PostalCode = "346330",
                     State = "Alberta",
                     Country = AvailableCountries.Canada,
-                    CustomerId = 1
+                    CustomerId = 1,
+                    
                 };
                 adressList.Add(addItem);
                 List<string> notesList = new List<string>();
                 notesList.Add("note1");
                 var repository = new CustomerRepository();
                 CustomerClass customer = new CustomerClass
-                {
+                {   
                     FirstName = "John",
                     LastName = "Second",
                     Addresses = adressList,
                     Notes = notesList,
                     Email = "ashfjfnh@gmail.com",
                     PhoneNumber = "+16175551212",
-                    TotalPurchasesAmount = 4
+                    TotalPurchasesAmount = 4,
+                    ID = 787
                 };
                 repository.Create(customer);
                 return customer;

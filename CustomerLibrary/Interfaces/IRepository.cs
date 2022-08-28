@@ -1,13 +1,16 @@
-﻿namespace CustomerLibrary.Interfaces
+﻿using System.Collections.Generic;
+
+namespace CustomerLibrary.Interfaces
 {
-    internal interface IRepository<TEntity>
+    public interface IRepository<TEntity>
     {
         void Create(TEntity entity);
 
+        TEntity Read(string EntityCode);
+
         void Update(TEntity entity);
 
-        void Delete(TEntity entity);
-
-
+        bool Delete(TEntity entity);
+        List<TEntity> GetAll();
     }
 }

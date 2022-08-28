@@ -2,6 +2,8 @@
 using CustomerInformation;
 using System.Data.SqlClient;
 using System.Data;
+using System;
+using System.Collections.Generic;
 
 namespace CustomerLibrary.Repositories
 {
@@ -38,14 +40,13 @@ namespace CustomerLibrary.Repositories
             {
                 Value = entity.TotalPurchasesAmount
             };
-
             command.Parameters.Add(FirstNameParam);
             command.Parameters.Add(LastNameParam);
             command.Parameters.Add(PhoneNumberParam);
             command.Parameters.Add(EmailParam);
             command.Parameters.Add(TotalPurchasesAmountParam);
 
-            command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
         }
 
@@ -54,13 +55,13 @@ namespace CustomerLibrary.Repositories
             using var connection = GetConnection();
             connection.Open();
             var command = new SqlCommand(
-             "SELECT * FROM [Customer] WHERE Email= @Email", connection);
+             "SELECT * FROM [Customer] WHERE CustomerId= @Id", connection);
 
-            var EmailParam = new SqlParameter("@Email", SqlDbType.VarChar, 50)
+            var IdParam = new SqlParameter("@Id", SqlDbType.VarChar, 50)
             {
                 Value = EntityCode
             };
-            command.Parameters.Add(EmailParam);
+            command.Parameters.Add(IdParam);
 
             using var reader = command.ExecuteReader();
 
@@ -90,7 +91,7 @@ namespace CustomerLibrary.Repositories
              Email = @Email,  
              PhoneNumber = @PhoneNumber,
              TotalPurchasesAmount = @TotalPurchasesAmount
-             WHERE Email=@Email", connection);
+             WHERE CustomerId=@Id", connection);
 
             var EmailParam = new SqlParameter("@Email", SqlDbType.VarChar, 50)
             {
@@ -113,30 +114,62 @@ namespace CustomerLibrary.Repositories
             {
                 Value = entity.TotalPurchasesAmount
             };
-
+            var IdParam = new SqlParameter("@Id", SqlDbType.VarChar, 50)
+            {
+                Value = entity.ID,
+            };
+           
             command.Parameters.Add(EmailParam);
             command.Parameters.Add(FirstNameParam);
             command.Parameters.Add(LastNameParam);
             command.Parameters.Add(PhoneNumberParam);
             command.Parameters.Add(TotalPurchasesAmountParam);
+            command.Parameters.Add(IdParam);
 
             command.ExecuteNonQuery();
 
         }
 
-        public void Delete(CustomerClass entity)
+        public bool Delete(CustomerClass entity)
         {
             using var connection = GetConnection();
             connection.Open();
             var command = new SqlCommand(
-             "DELETE FROM [Customer] WHERE Email= @Email", connection);
+             "DELETE FROM [Customer] WHERE CustomerID= @Id", connection);
 
-            var EmailParam = new SqlParameter("@Email", SqlDbType.VarChar, 50)
+            var IdParam = new SqlParameter("@Id", SqlDbType.VarChar, 50)
             {
-                Value = entity.Email,
+                Value = entity.ID,
             };
-            command.Parameters.Add(EmailParam);
+            command.Parameters.Add(IdParam);
             command.ExecuteNonQuery();
+            return true;
         }
+
+        public List<CustomerClass> GetAll()
+        {
+            var customers = new List<CustomerClass>();
+            using var connection = GetConnection();
+            connection.Open();
+            var command = new SqlCommand(
+             "SELECT * FROM [Customer] ", connection);
+
+            using var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                customers.Add(new CustomerClass
+                {   ID = (int)reader["CustomerId"],
+                    FirstName = reader["FirstName"].ToString(),
+                    LastName = reader["LastName"].ToString(),
+                    PhoneNumber = reader["PhoneNumber"].ToString(),
+                    Email = reader["Email"].ToString(),
+                    TotalPurchasesAmount = Convert.ToDecimal(reader["TotalPurchasesAmount"].ToString())
+                });  
+      
+            }
+            return customers;
+        }
+
     }
 }

@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj",
+        "projectName": "CustomerLibrary.WebForms",
+        "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj": {
+                "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj",
+        "projectName": "CustomerLibrary",
+        "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj",
+        "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Amaliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj",
+        "projectName": "CustomerLibrary.WebForms.Tests",
+        "projectPath": "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj",
+        "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Amaliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj": {
+                "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

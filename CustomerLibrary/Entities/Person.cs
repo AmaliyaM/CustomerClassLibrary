@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-
 namespace CustomerInformation
 {
     public abstract class Person

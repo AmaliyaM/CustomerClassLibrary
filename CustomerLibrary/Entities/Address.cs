@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 namespace CustomerInformation
 {
     public class Address
@@ -20,6 +19,8 @@ namespace CustomerInformation
         public AvailableCountries Country { get; set; } = AvailableCountries.Canada;
 
         public int CustomerId { get; set; }
+
+        public int AddressId { get; set; }
 
     }
 }

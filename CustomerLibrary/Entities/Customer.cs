@@ -1,4 +1,7 @@
-﻿namespace CustomerInformation
+﻿using CustomerLibrary.Entities;
+using System.Collections.Generic;
+
+namespace CustomerInformation
 {
     public class CustomerClass : Person
     {
@@ -8,9 +11,10 @@
 
         public string? Email { get; set; } = string.Empty;
 
-        public List<string> Notes { get; set; } = new List<string>();
+        public List<Note> Notes { get; set; } = new List<Note>();
 
         public decimal? TotalPurchasesAmount { get; set; } = 0;
+        public int? ID { get; set; } = null;
 
     }
 

@@ -1,4 +1,5 @@
-﻿namespace CustomerInformation
+﻿using System.Collections.Generic;
+namespace CustomerInformation
 {
     public class AddressValidator
     {

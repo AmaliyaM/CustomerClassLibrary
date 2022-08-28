@@ -25,7 +25,7 @@ namespace Customer.Tests
         public void ShouldBeAbleToReadAddress()
         {
             AddressFixture.CreateMockAddress();
-            var createdAddress = AddressFixture.CreateAddressRepository().Read(569);
+            var createdAddress = AddressFixture.CreateAddressRepository().Read("780");
             Assert.Equal(createdAddress.FirstLine, "updated2");
 
         }
@@ -37,7 +37,7 @@ namespace Customer.Tests
             var repository = AddressFixture.CreateAddressRepository();
             address.FirstLine = "updated2";
             repository.Update(address);
-            var result = repository.Read(569).FirstLine;
+            var result = repository.Read("780").FirstLine;
             Assert.Equal(result, "updated2");
 
         }
@@ -48,7 +48,7 @@ namespace Customer.Tests
             var address = AddressFixture.CreateMockAddress();
             var repository = AddressFixture.CreateAddressRepository();
             repository.Delete(address);
-            var deletedAddress = repository.Read(569);
+            var deletedAddress = repository.Read("569");
             Assert.Null(deletedAddress);
         }
 
@@ -65,7 +65,7 @@ namespace Customer.Tests
                     PostalCode = "346330",
                     State = "Alberta",
                     Country = AvailableCountries.Canada,
-                    CustomerId = 569
+                    CustomerId = 780
                 };
                 var repository = new AddressRepository();
                 repository.Create(address);
