@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text;
 using CustomerInformation;
+using CustomerLibrary.Entities;
 
 namespace AddressTests;
 

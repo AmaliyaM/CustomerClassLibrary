@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CustomerInformation
+namespace CustomerLibrary.Entities
 {
     public enum AddressType
     {

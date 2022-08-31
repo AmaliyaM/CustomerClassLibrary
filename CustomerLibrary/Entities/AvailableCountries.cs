@@ -1,5 +1,5 @@
 ﻿using System.Runtime.Serialization;
-namespace CustomerInformation
+namespace CustomerLibrary.Entities
 {
     public enum AvailableCountries
     {

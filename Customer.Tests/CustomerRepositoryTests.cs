@@ -1,6 +1,7 @@
 ﻿using CustomerInformation;
 using CustomerLibrary.Interfaces;
 using CustomerLibrary.Repositories;
+using CustomerLibrary.Entities;
 namespace Customer.Tests
 {
     public class CustomerRepositoryTest
@@ -83,8 +84,7 @@ namespace Customer.Tests
                     
                 };
                 adressList.Add(addItem);
-                List<string> notesList = new List<string>();
-                notesList.Add("note1");
+                List<Note> notesList = new List<Note>();
                 var repository = new CustomerRepository();
                 CustomerClass customer = new CustomerClass
                 {   

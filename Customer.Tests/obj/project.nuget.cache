@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6uff8Xs61+ekLMnrisw8ZDFZZ4FzZm6yypzM9tjxepSt/QIgnxK2BFKtN44aY8z1bzyyAoOmfV6G+CNQuIiqwg==",
+  "dgSpecHash": "GrJchGh0w/GT92Qp1MXOhRaB51csw4N5fwCN4LcWUUX6DSiD98Jdjr8YikYBNt9u4CM0Z1jh6AojnrB/5eG1GQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amaliya\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\microsoft.net.test.sdk\\17.1.0\\microsoft.net.test.sdk.17.1.0.nupkg.sha512",
+    "C:\\Users\\Amaliya\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\xunit\\2.4.1\\xunit.2.4.1.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",

@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System;
 using System.Collections.Generic;
+using CustomerLibrary.Entities;
 
 namespace CustomerLibrary.Repositories
 {

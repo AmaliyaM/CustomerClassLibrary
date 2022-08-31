@@ -11,3 +11,4 @@ D:\Projects\CustomerProjectFolder\CustomerLibrary\obj\Debug\net472\CustomerLibra
 D:\Projects\CustomerProjectFolder\CustomerLibrary\obj\Debug\net472\CustomerLibrary.csproj.CopyComplete
 D:\Projects\CustomerProjectFolder\CustomerLibrary\obj\Debug\net472\CustomerLibrary.exe
 D:\Projects\CustomerProjectFolder\CustomerLibrary\obj\Debug\net472\CustomerLibrary.pdb
+D:\Projects\CustomerProjectFolder\CustomerLibrary\bin\Debug\net472\System.ComponentModel.Annotations.dll

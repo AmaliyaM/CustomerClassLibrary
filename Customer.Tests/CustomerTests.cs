@@ -1,4 +1,5 @@
 ﻿using  CustomerInformation;
+using CustomerLibrary.Entities;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
@@ -21,8 +22,7 @@ public class CustomerTest
             CustomerId = 1
         };
         adressList.Add(addItem);
-        List<string> notes = new List<string>();
-        notes.Add("note1");
+        List<Note> notes = new List<Note>();
         CustomerClass customer = new CustomerClass
         {
             FirstName = "John",
@@ -57,8 +57,11 @@ public class CustomerTest
             Country = AvailableCountries.Canada,
             CustomerId = 1};
         adressList.Add(addItem);
-        List<string> notes = new List<string>();
-        notes.Add("note1");
+        List<Note> notes = new List<Note>();
+        notes.Add(new Note()
+        {
+            NoteLine=""
+        });
 
         CustomerClass customer = new CustomerClass
         {
@@ -86,7 +89,7 @@ public class CustomerTest
     {
         List<Address> adressList = new List<Address>();
         adressList.Clear();
-        List<string> notes = new List<string>();
+        List<Note> notes = new List<Note>();
         notes.Clear();
         CustomerClass customer = new CustomerClass
         {
@@ -131,8 +134,7 @@ public class CustomerTest
             CustomerId = 1
         };
         adressList.Add(addItem);
-        List<string> notes = new List<string>();
-        notes.Add("note1");
+        List<Note> notes = new List<Note>();
         CustomerClass customer = new CustomerClass
         {
             FirstName = "john",
@@ -171,8 +173,7 @@ public class CustomerTest
             CustomerId = 1
         };
         adressList.Add(addItem);
-        List<string> notes = new List<string>();
-        notes.Add("note1");
+        List<Note> notes = new List<Note>();
         CustomerClass customer = new CustomerClass
         {
             FirstName = "john",

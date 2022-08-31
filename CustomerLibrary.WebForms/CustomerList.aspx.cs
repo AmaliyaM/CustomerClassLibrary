@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CustomerLibrary.Repositories;
 using CustomerLibrary.Interfaces;
+using CustomerLibrary.Entities;
 
 namespace CustomerLibrary.WebForms
 {

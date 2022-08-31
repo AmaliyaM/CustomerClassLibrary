@@ -1,6 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System;
+using CustomerLibrary.Entities;
+
 namespace CustomerInformation
 {
     public class CustomerValidator

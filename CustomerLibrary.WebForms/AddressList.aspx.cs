@@ -1,4 +1,5 @@
 ﻿using CustomerInformation;
+using CustomerLibrary.Entities;
 using CustomerLibrary.Interfaces;
 using CustomerLibrary.Repositories;
 using System;
