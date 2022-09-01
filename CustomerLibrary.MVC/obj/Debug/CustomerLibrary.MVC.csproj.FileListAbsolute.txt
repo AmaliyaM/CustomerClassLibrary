@@ -86,3 +86,7 @@ D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\System.Web.Http.WebHos
 D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\CustomerLibrary.exe
 D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\CustomerLibrary.pdb
 D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\CustomerLibrary.exe.config
+D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\PagedList.dll
+D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\PagedList.Mvc.dll
+D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\PagedList.xml
+D:\Projects\CustomerProjectFolder\CustomerLibrary.MVC\bin\PagedList.Mvc.xml

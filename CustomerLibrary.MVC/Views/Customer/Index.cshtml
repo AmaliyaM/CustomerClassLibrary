@@ -1,57 +1,64 @@
-﻿@model IEnumerable<CustomerLibrary.Entities.CustomerClass>
+﻿
+@using PagedList.Mvc;
+@using PagedList;
+@model PagedList.IPagedList<CustomerLibrary.Entities.CustomerClass>
+
+
 
 @{
     ViewBag.Title = "Customers";
 }
 
-<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new {page = Model.PageCount })
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(_ => Model[0].FirstName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(_ => Model[0].LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
+            @Html.DisplayNameFor(_ => Model[0].PhoneNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayNameFor(_ => Model[0].Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalPurchasesAmount)
+            @Html.DisplayNameFor(_ => Model[0].TotalPurchasesAmount)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalPurchasesAmount)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(_ => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => item.TotalPurchasesAmount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>
+    Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

@@ -51,7 +51,7 @@ namespace CustomerLibrary.Repositories
 
         }
 
-        public CustomerClass Read(string EntityCode)
+        public CustomerClass Read(int EntityCode)
         {
             using var connection = GetConnection();
             connection.Open();
@@ -131,7 +131,7 @@ namespace CustomerLibrary.Repositories
 
         }
 
-        public bool Delete(CustomerClass entity)
+        public bool Delete(int EntityCode)
         {
             using var connection = GetConnection();
             connection.Open();
@@ -140,7 +140,7 @@ namespace CustomerLibrary.Repositories
 
             var IdParam = new SqlParameter("@Id", SqlDbType.VarChar, 50)
             {
-                Value = entity.ID,
+                Value = EntityCode,
             };
             command.Parameters.Add(IdParam);
             command.ExecuteNonQuery();

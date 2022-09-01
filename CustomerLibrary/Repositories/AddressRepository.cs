@@ -73,7 +73,7 @@ namespace CustomerLibrary.Repositories
             }
             
 
-            public Address Read(string EntityCode)
+            public Address Read(int EntityCode)
             {
             using (var connection = GetConnection())
             {
@@ -195,7 +195,7 @@ namespace CustomerLibrary.Repositories
 
             }
 
-            public bool Delete(Address entity)
+            public bool Delete(int entityCode)
             {
             using (var connection = GetConnection())
             {
@@ -205,7 +205,7 @@ namespace CustomerLibrary.Repositories
 
                 var AddressIdParam = new SqlParameter("@AddressId", SqlDbType.Int)
                 {
-                    Value = entity.AddressId
+                    Value = entityCode
                 };
                 command.Parameters.Add(AddressIdParam);
 

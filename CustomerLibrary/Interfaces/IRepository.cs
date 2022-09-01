@@ -6,11 +6,11 @@ namespace CustomerLibrary.Interfaces
     {
         void Create(TEntity entity);
 
-        TEntity Read(string EntityCode);
+        TEntity Read(int EntityCode);
 
         void Update(TEntity entity);
 
-        bool Delete(TEntity entity);
+        bool Delete(int entityCode);
         List<TEntity> GetAll();
     }
 }

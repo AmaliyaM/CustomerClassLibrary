@@ -40,7 +40,7 @@ namespace CustomerLibrary.Repositories
         }
 
 
-        public Note Read(string EntityCode)
+        public Note Read(int EntityCode)
         {
             using (var connection = GetConnection())
             {
@@ -109,7 +109,7 @@ namespace CustomerLibrary.Repositories
 
         }
 
-        public bool Delete(Note entity)
+        public bool Delete(int entityCode)
         {
             using (var connection = GetConnection())
             {
@@ -119,7 +119,7 @@ namespace CustomerLibrary.Repositories
 
                 var NoteIdParam = new SqlParameter("@NoteId", SqlDbType.Int)
                 {
-                    Value = entity.NoteId
+                    Value = entityCode
                 };
                 command.Parameters.Add(NoteIdParam);
 

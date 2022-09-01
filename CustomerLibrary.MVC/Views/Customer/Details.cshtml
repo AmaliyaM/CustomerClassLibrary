@@ -1,0 +1,174 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div style="margin-bottom:30px">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            First Name
+        </dt>
+
+        <dd>
+            @Model.Customer.FirstName
+        </dd>
+
+        <dt>
+            Last Name
+        </dt>
+
+        <dd>
+            @Model.Customer.LastName
+        </dd>
+
+        <dt>
+            Phone Number
+        </dt>
+
+        <dd>
+            @Model.Customer.PhoneNumber
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Model.Customer.Email
+        </dd>
+
+        <dt>
+            Total Purchases Amount
+
+        </dt>
+
+        <dd>
+            @Model.Customer.TotalPurchasesAmount
+        </dd>
+    </dl>
+</div>
+
+<table class="table">
+    <b>
+        Customer's Notes:
+     </b>
+
+        @if (Model.Notes.Count != 0)
+        {
+            foreach (var note in Model.Notes)
+            {
+            <tr>
+                <td>
+                    @note.NoteLine
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit","Note", new { id = note.NoteId, customerId = Model.Id }, null) |
+                    @Html.ActionLink("Delete", "Delete", "Note", new { id = note.NoteId, customerId = Model.Id }, null)
+
+
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <div>Customer has no notes</div>
+    }
+    </table>
+
+
+
+<table class="table">
+    <b>
+        Customer's Addresses:
+    </b>
+    <tr>
+        <th>
+            First Line
+        </th>
+
+        <th>
+            Second Line
+        </th>
+
+        <th>
+            Type
+        </th>
+
+        <th>
+            City
+        </th>
+
+        <th>
+            Postal Code
+        </th>
+
+        <th>
+            State
+        </th>
+
+        <th>
+            Country
+        </th>
+
+        <th></th>
+
+
+    </tr>
+
+    @if (Model.Addresses.Count != 0)
+    {
+        foreach (var address in Model.Addresses)
+        {
+            <tr>
+                <td>
+                    @address.FirstLine
+                </td>
+
+                <td>
+                    @address.SecondLine
+                </td>
+
+                <td>
+                    @address.Type
+                </td>
+
+                <td>
+                    @address.City
+                </td>
+
+                <td>
+                    @address.PostalCode
+                </td>
+
+                <td>
+                    @address.State
+                </td>
+
+                <td>
+                    @address.Country
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = address.AddressId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = address.AddressId })
+
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <div>Customer has no addresses</div>
+    }
+</table>
+
+    <p>
+
+        @Html.ActionLink("Back to List", "Index")
+    </p>

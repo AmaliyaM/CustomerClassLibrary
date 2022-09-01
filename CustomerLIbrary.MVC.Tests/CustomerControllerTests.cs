@@ -23,7 +23,7 @@ namespace CustomerLIbrary.MVC.Tests
         public void ShouldReturnListOfCustomers()
         {
             var controller = new CustomerController();
-            var customersResult = controller.Index();
+            var customersResult = controller.Index(3);
             var customersView = customersResult as ViewResult;
             var customerModel = customersView.Model as List<CustomerClass>;
             Assert.IsTrue(customerModel.Exists(x => x.ID == 1053));
