@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace CustomerLibrary.MVC.Controllers
 {
@@ -33,18 +34,16 @@ namespace CustomerLibrary.MVC.Controllers
 
         // POST: Note/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(int customerId, Note note)
         {
-            try
+            if (!this.ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
+                ViewBag.ErrorMessage = "Enter valid values!";
                 return View();
             }
+            _noteRepository.Create(note);
+
+            return RedirectToAction("Details", "Customer", new { id = customerId });
         }
 
         // GET: Note/Edit/5

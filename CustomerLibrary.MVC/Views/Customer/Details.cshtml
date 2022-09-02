@@ -3,172 +3,174 @@
 @{
     ViewBag.Title = "Details";
 }
+<div style="display:flex; flex-direction:column">
+    <h2>Details</h2>
 
-<h2>Details</h2>
+    <div style="margin-bottom:30px">
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                First Name
+            </dt>
 
-<div style="margin-bottom:30px">
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            First Name
-        </dt>
+            <dd>
+                @Model.Customer.FirstName
+            </dd>
 
-        <dd>
-            @Model.Customer.FirstName
-        </dd>
+            <dt>
+                Last Name
+            </dt>
 
-        <dt>
-            Last Name
-        </dt>
+            <dd>
+                @Model.Customer.LastName
+            </dd>
 
-        <dd>
-            @Model.Customer.LastName
-        </dd>
+            <dt>
+                Phone Number
+            </dt>
 
-        <dt>
-            Phone Number
-        </dt>
+            <dd>
+                @Model.Customer.PhoneNumber
+            </dd>
 
-        <dd>
-            @Model.Customer.PhoneNumber
-        </dd>
+            <dt>
+                Email
+            </dt>
 
-        <dt>
-            Email
-        </dt>
+            <dd>
+                @Model.Customer.Email
+            </dd>
 
-        <dd>
-            @Model.Customer.Email
-        </dd>
+            <dt>
+                Total Purchases Amount
 
-        <dt>
-            Total Purchases Amount
+            </dt>
 
-        </dt>
+            <dd>
+                @Model.Customer.TotalPurchasesAmount
+            </dd>
+        </dl>
+    </div>
 
-        <dd>
-            @Model.Customer.TotalPurchasesAmount
-        </dd>
-    </dl>
-</div>
-
-<table class="table">
-    <b>
-        Customer's Notes:
-     </b>
+    <table class="table">
+        <b>
+            Customer's Notes:
+        </b>
 
         @if (Model.Notes.Count != 0)
         {
             foreach (var note in Model.Notes)
             {
-            <tr>
-                <td>
-                    @note.NoteLine
-                </td>
+                <tr>
+                    <td>
+                        @note.NoteLine
+                    </td>
 
-                <td>
-                    @Html.ActionLink("Edit", "Edit","Note", new { id = note.NoteId, customerId = Model.Id }, null) |
-                    @Html.ActionLink("Delete", "Delete", "Note", new { id = note.NoteId, customerId = Model.Id }, null)
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Note", new { id = note.NoteId, customerId = Model.Id }, null) |
+                        @Html.ActionLink("Delete", "Delete", "Note", new { id = note.NoteId, customerId = Model.Id }, null)
 
-
-                </td>
-            </tr>
+                    </td>
+                </tr>
+            }
         }
-    }
-    else
-    {
-        <div>Customer has no notes</div>
-    }
+        else
+        {
+            <div>Customer has no notes</div>
+        }
     </table>
 
+    @Html.ActionLink("Add new note", "Create", "Note", new { customerId = Model.Id }, null)
 
 
-<table class="table">
-    <b>
-        Customer's Addresses:
-    </b>
-    <tr>
-        <th>
-            First Line
-        </th>
+    <table class="table">
+        <b style="margin-top:20px">
+            Customer's Addresses:
+        </b>
+        <tr>
+            <th>
+                First Line
+            </th>
 
-        <th>
-            Second Line
-        </th>
+            <th>
+                Second Line
+            </th>
 
-        <th>
-            Type
-        </th>
+            <th>
+                Type
+            </th>
 
-        <th>
-            City
-        </th>
+            <th>
+                City
+            </th>
 
-        <th>
-            Postal Code
-        </th>
+            <th>
+                Postal Code
+            </th>
 
-        <th>
-            State
-        </th>
+            <th>
+                State
+            </th>
 
-        <th>
-            Country
-        </th>
+            <th>
+                Country
+            </th>
 
-        <th></th>
+            <th></th>
 
 
-    </tr>
+        </tr>
 
-    @if (Model.Addresses.Count != 0)
-    {
-        foreach (var address in Model.Addresses)
+        @if (Model.Addresses.Count != 0)
         {
-            <tr>
-                <td>
-                    @address.FirstLine
-                </td>
+            foreach (var address in Model.Addresses)
+            {
+                <tr>
+                    <td>
+                        @address.FirstLine
+                    </td>
 
-                <td>
-                    @address.SecondLine
-                </td>
+                    <td>
+                        @address.SecondLine
+                    </td>
 
-                <td>
-                    @address.Type
-                </td>
+                    <td>
+                        @address.Type
+                    </td>
 
-                <td>
-                    @address.City
-                </td>
+                    <td>
+                        @address.City
+                    </td>
 
-                <td>
-                    @address.PostalCode
-                </td>
+                    <td>
+                        @address.PostalCode
+                    </td>
 
-                <td>
-                    @address.State
-                </td>
+                    <td>
+                        @address.State
+                    </td>
 
-                <td>
-                    @address.Country
-                </td>
+                    <td>
+                        @address.Country
+                    </td>
 
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = address.AddressId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = address.AddressId })
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Address", new { id = address.AddressId, customerId = Model.Id }, null) |
+                        @Html.ActionLink("Delete", "Delete", "Address", new { id = address.AddressId, customerId = Model.Id }, null)
 
-                </td>
-            </tr>
+                    </td>
+                </tr>
+            }
         }
-    }
-    else
-    {
-        <div>Customer has no addresses</div>
-    }
-</table>
+        else
+        {
+            <div>Customer has no addresses</div>
+        }
+    </table>
+    @Html.ActionLink("Add new address", "Create", "Address", new { customerId = Model.Id }, null)
 
     <p>
 
         @Html.ActionLink("Back to List", "Index")
     </p>
+</div>

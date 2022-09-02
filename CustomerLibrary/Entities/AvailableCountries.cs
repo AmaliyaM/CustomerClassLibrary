@@ -1,13 +1,14 @@
-﻿using System.Runtime.Serialization;
+﻿using System.ComponentModel;
+using System.Runtime.Serialization;
 namespace CustomerLibrary.Entities
 {
     public enum AvailableCountries
     {
 
-        [EnumMember(Value = "Canada")]
+        [Description("Canada")]
         Canada,
 
-        [EnumMember(Value = "United States")]
+        [Description("United States")]
         US
     }
 }
