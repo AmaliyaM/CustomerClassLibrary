@@ -12,3 +12,17 @@ D:\Projects\CustomerProjectFolder\CustomerLibrary\obj\Debug\net472\CustomerLibra
 D:\Projects\CustomerProjectFolder\CustomerLibrary\obj\Debug\net472\CustomerLibrary.exe
 D:\Projects\CustomerProjectFolder\CustomerLibrary\obj\Debug\net472\CustomerLibrary.pdb
 D:\Projects\CustomerProjectFolder\CustomerLibrary\bin\Debug\net472\System.ComponentModel.Annotations.dll
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\bin\Debug\net472\CustomerLibrary.exe.config
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\bin\Debug\net472\CustomerLibrary.exe
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\bin\Debug\net472\CustomerLibrary.pdb
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\bin\Debug\net472\System.ComponentModel.Annotations.dll
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\bin\Debug\net472\System.Data.SqlClient.dll
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.csproj.AssemblyReference.cache
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.csproj.SuggestedBindingRedirects.cache
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.AssemblyInfoInputs.cache
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.AssemblyInfo.cs
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.csproj.CoreCompileInputs.cache
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.csproj.CopyComplete
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.exe
+D:\Projects\MVCCustomerFolder\CustomerClassLibrary\CustomerLibrary\obj\Debug\net472\CustomerLibrary.pdb

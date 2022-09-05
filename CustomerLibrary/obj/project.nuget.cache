@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WOmr1qQpNUkGfr28XX0Jn15K7QgMzEvfTI7FrhzpXMT+OSfV7GDzDC0rcN2AM88jTtV0Pxu8z7rGDQhqFFXJtA==",
+  "dgSpecHash": "HNWZgCy3Hqgpk/FRDDtNVZZ7bseFd5DHEymhKWCxAp5puiR3NuEF5h8t+fBFU4ApUUltQ8igL8Vf89p+WIFCYQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj",
+  "projectFilePath": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\CustomerLibrary\\CustomerLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amaliya\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Amaliya\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512"

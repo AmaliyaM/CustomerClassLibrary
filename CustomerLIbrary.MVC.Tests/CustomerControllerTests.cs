@@ -3,6 +3,7 @@ using CustomerLibrary.Interfaces;
 using CustomerLibrary.MVC.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using PagedList;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -23,20 +24,20 @@ namespace CustomerLIbrary.MVC.Tests
         public void ShouldReturnListOfCustomers()
         {
             var controller = new CustomerController();
-            var customersResult = controller.Index(3);
+            var customersResult = controller.Index(1);
             var customersView = customersResult as ViewResult;
-            var customerModel = customersView.Model as List<CustomerClass>;
-            Assert.IsTrue(customerModel.Exists(x => x.ID == 1053));
+            var customerModel = customersView.Model as PagedList<CustomerClass>;
+            Assert.IsTrue(customerModel.Count != 0);
         }
 
 
         [TestMethod]
         public void ShouldCreateCustomer()
         {
-            var customerControllerMock = new Mock<IRepository<CustomerClass>>();
+            var customerControllerMock = new Mock<ICustomerService>();
             var customersController = new CustomerController(customerControllerMock.Object);
             customersController.Create();
-            var result = customersController.Create(new CustomerClass()
+            var result = customersController.Create(1, new CustomerClass()
             {
                 FirstName = "Created",
                 LastName = "AtControllerTest",
@@ -44,6 +45,31 @@ namespace CustomerLIbrary.MVC.Tests
                 PhoneNumber = "+16175551212",
                 TotalPurchasesAmount = 4
             }) as RedirectToRouteResult;
+
+            Assert.IsNotNull(result);
+
+        }
+
+        [TestMethod]
+        public void ShouldBeAbleToDeleteCustomer()
+        {
+            var customerControllerMock = new Mock<ICustomerService>();
+            var customersController = new CustomerController(customerControllerMock.Object);
+            var result = customersController.Delete(1053);
+            customerControllerMock.Verify(x => x.DeleteCustomer(1053));
+        }
+
+        [TestMethod]
+        public void ShouldBeAbleToUpdateCustomer()
+        {
+            var customerControllerMock = new Mock<ICustomerService>();
+            var customersController = new CustomerController(customerControllerMock.Object);
+           var result = customersController.Edit(new CustomerClass()
+            {
+                ID = 1053,
+                FirstName = "update"
+
+            });
 
             Assert.IsNotNull(result);
 

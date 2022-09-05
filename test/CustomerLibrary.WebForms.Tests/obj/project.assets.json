@@ -873,11 +873,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj",
+      "projectUniqueName": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj",
       "projectName": "CustomerLibrary.WebForms.Tests",
-      "projectPath": "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj",
+      "projectPath": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\test\\CustomerLibrary.WebForms.Tests\\CustomerLibrary.WebForms.Tests.csproj",
       "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\CustomerProjectFolder\\test\\CustomerLibrary.WebForms.Tests\\obj\\",
+      "outputPath": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\test\\CustomerLibrary.WebForms.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -899,8 +899,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj": {
-              "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj"
+            "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj": {
+              "projectPath": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\CustomerLibrary.WebForms\\CustomerLibrary.WebForms.csproj"
             }
           }
         }

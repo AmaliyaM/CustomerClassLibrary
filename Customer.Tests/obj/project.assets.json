@@ -677,11 +677,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
+      "projectUniqueName": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\Customer.Tests\\Customer.Tests.csproj",
       "projectName": "Customer.Tests",
-      "projectPath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\Customer.Tests.csproj",
+      "projectPath": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\Customer.Tests\\Customer.Tests.csproj",
       "packagesPath": "C:\\Users\\Amaliya\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\CustomerProjectFolder\\Customer.Tests\\obj\\",
+      "outputPath": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\Customer.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -703,8 +703,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj": {
-              "projectPath": "D:\\Projects\\CustomerProjectFolder\\CustomerLibrary\\CustomerLibrary.csproj"
+            "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\CustomerLibrary\\CustomerLibrary.csproj": {
+              "projectPath": "D:\\Projects\\MVCCustomerFolder\\CustomerClassLibrary\\CustomerLibrary\\CustomerLibrary.csproj"
             }
           }
         }
