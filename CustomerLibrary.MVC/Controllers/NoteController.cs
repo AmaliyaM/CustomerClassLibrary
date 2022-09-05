@@ -1,38 +1,29 @@
 ﻿using CustomerLibrary.Entities;
 using CustomerLibrary.Interfaces;
-using CustomerLibrary.MVC.Models;
-using CustomerLibrary.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using CustomerLibrary.Services;
 using System.Web.Mvc;
-using System.Web.UI;
 
 namespace CustomerLibrary.MVC.Controllers
 {
     public class NoteController : Controller
     {
-        private readonly IRepository<CustomerClass> _customerRepository;
-        private NoteRepository _noteRepository;
-        private AddressRepository _addressRepository;
+        private INoteService _noteService;
 
         public NoteController()
         {
-            _noteRepository = new NoteRepository();
+            _noteService = new NoteService();
         }
 
-        public NoteController(NoteRepository noteRepository)
+        public NoteController(INoteService noteService)
         {
-            _noteRepository = noteRepository;
+            _noteService = noteService;
         }
-        // GET: Note/Create
+
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Note/Create
         [HttpPost]
         public ActionResult Create(int customerId, Note note)
         {
@@ -41,21 +32,21 @@ namespace CustomerLibrary.MVC.Controllers
                 ViewBag.ErrorMessage = "Enter valid values!";
                 return View();
             }
-            _noteRepository.Create(note);
+            _noteService.Create(note);
 
             return RedirectToAction("Details", "Customer", new { id = customerId });
         }
 
-        // GET: Note/Edit/5
+
         public ActionResult Edit(int id)
         {
-            var note = _noteRepository.Read(id);
+            var note = _noteService.GetNote(id);
             return View(note);
         }
 
-        // POST: Note/Edit/5
+
         [HttpPost]
-        public ActionResult Edit(int id,int? customerId,Note note)
+        public ActionResult Edit(int id, int? customerId, Note note)
         {
             note.NoteId = id;
             if (!this.ModelState.IsValid)
@@ -63,29 +54,28 @@ namespace CustomerLibrary.MVC.Controllers
                 ViewBag.ErrorMessage = "Enter valid values!";
                 return View(note);
             }
-             _noteRepository.Update(note);
+            _noteService.Update(note);
 
             return RedirectToAction("Details", "Customer", new { id = customerId });
         }
 
-        // GET: Note/Delete/5
+
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Note/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id,int? customerId)
+        public ActionResult Delete(int id, int? customerId)
         {
-            _noteRepository.Delete(id);
+            _noteService.Delete(id);
 
             if (customerId.HasValue)
             {
                 return RedirectToAction("Details", "Customer", new { id = customerId });
             }
             else return View(); ;
-  
+
         }
     }
 }

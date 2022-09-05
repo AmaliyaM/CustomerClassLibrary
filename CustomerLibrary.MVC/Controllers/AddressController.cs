@@ -1,33 +1,25 @@
 ﻿using CustomerLibrary.Entities;
 using CustomerLibrary.Interfaces;
-using CustomerLibrary.MVC.Models;
-using CustomerLibrary.Repositories;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using CustomerLibrary.Services;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 
 namespace CustomerLibrary.MVC.Controllers
 {
     public class AddressController : Controller
     {
-        private readonly IRepository<CustomerClass> _customerRepository;
-        private NoteRepository _noteRepository;
-        private AddressRepository _addressRepository;
+        private IAddressService _addressService;
+
 
         public AddressController()
         {
-            _addressRepository = new AddressRepository();
+            _addressService = new AddressService();
         }
 
-        public AddressController(AddressRepository addressRepository)
+        public AddressController(IAddressService addressService)
         {
-            _addressRepository = addressRepository;
+            _addressService = addressService;
         }
-            
+
 
         // GET: Address/Create
         public ActionResult Create()
@@ -44,7 +36,7 @@ namespace CustomerLibrary.MVC.Controllers
                 ViewBag.ErrorMessage = "Enter valid values!";
                 return View();
             }
-            _addressRepository.Create(address);
+            _addressService.Create(address);
 
             return RedirectToAction("Details", "Customer", new { id = customerId });
         }
@@ -52,7 +44,7 @@ namespace CustomerLibrary.MVC.Controllers
         // GET: Address/Edit/5
         public ActionResult Edit(int id)
         {
-            var address = _addressRepository.Read(id);
+            var address = _addressService.GetAddress(id);
             return View(address);
         }
 
@@ -66,7 +58,7 @@ namespace CustomerLibrary.MVC.Controllers
                 ViewBag.ErrorMessage = "Enter valid values!";
                 return View(address);
             }
-            _addressRepository.Update(address);
+            _addressService.Update(address);
 
             return RedirectToAction("Details", "Customer", new { id = customerId });
         }
@@ -81,7 +73,7 @@ namespace CustomerLibrary.MVC.Controllers
         [HttpPost]
         public ActionResult Delete(int id, int? customerId)
         {
-            _addressRepository.Delete(id);
+            _addressService.Delete(id);
 
             if (customerId.HasValue)
             {

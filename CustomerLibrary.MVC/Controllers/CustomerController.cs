@@ -1,6 +1,7 @@
 ﻿using CustomerLibrary.Entities;
 using CustomerLibrary.Interfaces;
 using CustomerLibrary.Repositories;
+using CustomerLibrary.Services;
 using System.Web.Mvc;
 using PagedList;
 using System.Reflection;
@@ -10,39 +11,35 @@ namespace CustomerLibrary.MVC.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly IRepository<CustomerClass> _customerRepository;
-        private  NoteRepository _noteRepository;
-        private AddressRepository _addressRepository;
+        private ICustomerService _customerService;
 
         public CustomerController()
         {
-            _customerRepository = new CustomerRepository(); 
+            _customerService = new CustomerService();
         }
 
-        public CustomerController(IRepository<CustomerClass> customerRepository)
+        public CustomerController(ICustomerService customerService)
         {
-            _customerRepository = customerRepository;
+            _customerService = customerService;
         }
 
         // GET: Customer1
         public ActionResult Index(int? page)
-        {   
+        {
             int pageSize = 3;
             int pageNumber = (page ?? 1);
-            var customers = _customerRepository.GetAll();
+            var customers = _customerService.GetCustomers();
             return View(customers.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Customer1/Details/5
         public ActionResult Details(int id)
         {
-            _noteRepository = new NoteRepository();
-            _addressRepository = new AddressRepository();
             dynamic model = new ExpandoObject();
             model.Id = id;
-            model.Customer = _customerRepository.Read(id);
-            var notes = _noteRepository.GetAllCustomerNotes(id);
-            var addresses = _addressRepository.GetAllCustomerAdresses(id);
+            model.Customer = _customerService.GetCustomer(id);
+            var notes = _customerService.GetAllNotes(id);
+            var addresses = _customerService.GetAllAddresses(id);
             model.Notes = notes;
             model.Addresses = addresses;
             return View(model);
@@ -56,22 +53,22 @@ namespace CustomerLibrary.MVC.Controllers
 
         // POST: Customer1/Create
         [HttpPost]
-        public ActionResult Create(int page,CustomerClass customer)
+        public ActionResult Create(int page, CustomerClass customer)
         {
             if (!this.ModelState.IsValid)
             {
                 ViewBag.ErrorMessage = "Enter valid values!";
                 return View(customer);
             }
-                _customerRepository.Create(customer);
+            _customerService.Create(customer);
 
-                return RedirectToAction("Index", new { page });
+            return RedirectToAction("Index", new { page });
         }
 
         // GET: Customer1/Edit/5
         public ActionResult Edit(int id)
         {
-            var customer = _customerRepository.Read(id);
+            var customer = _customerService.GetCustomer(id);
             return View(customer);
         }
 
@@ -84,16 +81,16 @@ namespace CustomerLibrary.MVC.Controllers
                 ViewBag.ErrorMessage = "Enter valid values!";
                 return View(customer);
             }
-            _customerRepository.Update(customer);
+            _customerService.UpdateCustomer(customer);
 
-                return RedirectToAction("Index");
+            return RedirectToAction("Index");
 
         }
 
         // GET: Customer1/Delete/5
         public ActionResult Delete(int id)
         {
-            var customer = _customerRepository.Read(id);
+            var customer = _customerService.GetCustomer(id);
             return View();
         }
 
@@ -101,9 +98,9 @@ namespace CustomerLibrary.MVC.Controllers
         [HttpPost]
         public ActionResult Delete(int id, CustomerClass customer)
         {
-                _customerRepository.Delete(id);
+            _customerService.DeleteCustomer(id);
 
-                return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
     }
 }
